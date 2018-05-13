@@ -249,5 +249,39 @@ Mostrar los 3 cursos con más horas, de mayor a menor.
 
 
 
+## Realizar una consulta con agrupamiento y una función para mostrar la media, o suma, o la que tú decidas.
+
+Antes añadiremos más datos, así vemos también como insertar varios documentos al mismo tiempo.
+```console
+> var c1 = {nombre: "TypeScript", horas: 3, profesor: "Elsa Capunta"}
+> var c2 = {nombre: "JavaScript", horas: 5, profesor: "Elsa Capunta"}
+> var c3 = {nombre: "GIT", horas: 10, profesor: "Armando Bronca"}
+> var c4 = {nombre: "C++", horas: 50, profesor: "Aquiles Bailo"}
+> var c5 = {nombre: "Django", horas: 25, profesor: "Aquiles Bailo"}
+> db.cursos.insert([c1,c2,c3,c4,c5])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 5,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+```
+
+El total de cursos y la media de horas por profesor.
+```console
+> db.cursos.aggregate([{$group: {_id: "$profesor", totalCursos: {$sum: 1}, mediaHoras: {$avg: "$horas"}}}])
+{ "_id" : "Elsa Capunta", "totalCursos" : 3, "mediaHoras" : 9.333333333333334 }
+{ "_id" : "Aquiles Bailo", "totalCursos" : 3, "mediaHoras" : 45 }
+{ "_id" : "Armando Bronca", "totalCursos" : 2, "mediaHoras" : 9 }
+{ "_id" : "Elena Nito", "totalCursos" : 2, "mediaHoras" : 17.5 }
+```
+
+
+
+
 
 
