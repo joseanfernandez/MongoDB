@@ -133,6 +133,7 @@ Cursos que tengan más de 20 horas
         "horas" : 60,
         "profesor" : "Aquiles Bailo"
 }
+```
 
 Cursos que tengan 20 horas o más.
 ```console
@@ -158,7 +159,7 @@ Cursos que tengan 20 horas o más.
 ```
 
 
-### Menor que (Menor o igual que)
+### Menor que (Menor o igual que)
 
 ``` console
 > db.cursos.find({horas: {$lt:8}}).pretty()
