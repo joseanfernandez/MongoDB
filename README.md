@@ -3,13 +3,13 @@
 
 ## Crear una base de datos.
 
-````console
+```console
 > use tiendaOnline
 switched to db tiendaOnline
 ```
 
 ## Tener una colección.
-````console
+```console
 > db.createCollection('cursos');
 { "ok" : 1 }
 ```
