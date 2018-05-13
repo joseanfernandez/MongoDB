@@ -75,7 +75,7 @@ WriteResult({ "nInserted" : 1 })
 ```
 Nos ha permitido añadir un segundo documento con nombre "Java" que ya existía en la colección.
 
-### Creamos el índice
+### Creamos el índice
 ```console
 > db.cursos.createIndex({"nombre": 1}, {"unique":true})
 {
@@ -97,5 +97,5 @@ WriteResult({
         }
 })
 ```
-
+No lo inserta y además nos muestra el mensaje de error.
 
