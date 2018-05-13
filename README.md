@@ -62,7 +62,7 @@ WriteResult({ "nRemoved" : 1 })
 En este apartado vamos a crear un índice único para que no pueda repetirse el campo "nombre" del curso.
 
 ### Antes de crear el índice
-``console
+```console
 > db.cursos.insert({nombre: "Java", horas: 200, profesor: "Elsa Capunta"})
 WriteResult({ "nInserted" : 1 })
 > db.cursos.find()
