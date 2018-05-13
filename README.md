@@ -190,7 +190,7 @@ Cursos que tengan 8 horas o menos.
 
 ### _Tip_
 
-También puedes buscar resultados que no cumplan esa condición.
+#### Distinto de
 
 Cursos cuyas horas sean distintas de 8.
 ```console
