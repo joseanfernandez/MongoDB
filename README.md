@@ -188,6 +188,7 @@ Cursos que tengan 8 horas o menos.
 }
 ```
 
+### <span style="color:blue">Tip</span>
 
 
 
