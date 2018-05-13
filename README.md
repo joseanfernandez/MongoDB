@@ -190,5 +190,36 @@ Cursos que tengan 8 horas o menos.
 
 ### _Tip_
 
+También puedes buscar resultados que no cumplan esa condición.
+Cursos cuyas horas sean distintas de 8.
+```console
+> db.cursos.find({horas: {$ne:8}}).pretty()
+{
+        "_id" : ObjectId("5af6868783377b3b7eeff2e0"),
+        "nombre" : "Angular 6",
+        "horas" : 30,
+        "profesor" : "Elena Nito"
+}
+{
+        "_id" : ObjectId("5af686a783377b3b7eeff2e1"),
+        "nombre" : "Bootstrap 4",
+        "horas" : 5,
+        "profesor" : "Elena Nito"
+}
+{
+        "_id" : ObjectId("5af686dc83377b3b7eeff2e2"),
+        "nombre" : "Python",
+        "horas" : 60,
+        "profesor" : "Aquiles Bailo"
+}
+{
+        "_id" : ObjectId("5af6885f83377b3b7eeff2e5"),
+        "nombre" : "Java",
+        "horas" : 20,
+        "profesor" : "Elsa Capunta"
+}
+```
+
+
 
 
