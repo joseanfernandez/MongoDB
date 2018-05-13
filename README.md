@@ -222,5 +222,32 @@ Cursos cuyas horas sean distintas de 8.
 ```
 
 
+## Realizar una consulta en la que los documentos aparezcan ordenados y se limite el número de estos mostrados.
+
+Mostrar los 3 cursos con más horas, de mayor a menor.
+```console
+> db.cursos.find().sort({horas: -1}).limit(3).pretty()
+{
+        "_id" : ObjectId("5af686dc83377b3b7eeff2e2"),
+        "nombre" : "Python",
+        "horas" : 60,
+        "profesor" : "Aquiles Bailo"
+}
+{
+        "_id" : ObjectId("5af6868783377b3b7eeff2e0"),
+        "nombre" : "Angular 6",
+        "horas" : 30,
+        "profesor" : "Elena Nito"
+}
+{
+        "_id" : ObjectId("5af6885f83377b3b7eeff2e5"),
+        "nombre" : "Java",
+        "horas" : 20,
+        "profesor" : "Elsa Capunta"
+}
+```
+
+
+
 
 
