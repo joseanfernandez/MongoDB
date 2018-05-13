@@ -106,7 +106,7 @@ No lo inserta y además nos muestra el mensaje de error.
 Para mostrar los documentos de una manera más clara, hemos usado la función pretty().
 
 ### Igual
-Cursos que tengan 20 horas
+Cursos que tengan 20 horas.
 ```console
 > db.cursos.find({horas: 20}).pretty()
 {
@@ -118,7 +118,7 @@ Cursos que tengan 20 horas
 ```
 
 ### Mayor que (Mayor o igual que)
-Cursos que tengan más de 20 horas
+Cursos que tengan más de 20 horas.
 ```console
 > db.cursos.find({horas: {$gt:20}}).pretty()
 {
@@ -160,7 +160,7 @@ Cursos que tengan 20 horas o más.
 
 
 ### Menor que (Menor o igual que)
-
+Cursos que tengan menos de 8 horas.
 ``` console
 > db.cursos.find({horas: {$lt:8}}).pretty()
 {
@@ -171,6 +171,22 @@ Cursos que tengan 20 horas o más.
 }
 ```
 
+Cursos que tengan 8 horas o menos.
+```console
+> db.cursos.find({horas: {$lte:8}}).pretty()
+{
+        "_id" : ObjectId("5af686a783377b3b7eeff2e1"),
+        "nombre" : "Bootstrap 4",
+        "horas" : 5,
+        "profesor" : "Elena Nito"
+}
+{
+        "_id" : ObjectId("5af6870983377b3b7eeff2e3"),
+        "nombre" : "MongoDB",
+        "horas" : 8,
+        "profesor" : "Armando Bronca"
+}
+```
 
 
 
