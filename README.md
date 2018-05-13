@@ -4,6 +4,6 @@
 ## Crear una base de datos.
 
 ````console
-MongoDB Enterprise > use tiendaOnline
+> use tiendaOnline
 switched to db tiendaOnline
 ```
