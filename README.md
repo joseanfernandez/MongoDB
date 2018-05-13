@@ -7,3 +7,9 @@
 > use tiendaOnline
 switched to db tiendaOnline
 ```
+
+## Tener una colección.
+````console
+> db.createCollection('cursos');
+{ "ok" : 1 }
+```
